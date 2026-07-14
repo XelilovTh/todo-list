@@ -19,13 +19,12 @@ addBtn.addEventListener("click", (e) => {
   div.appendChild(removeBtn);
   list.appendChild(div)
 
-  div.addEventListener("click", (e) => {
-    if (e.target.classList.contains("elementText")) {
-      li.classList.toggle("done");
-    }
-    if (e.target.classList.contains("removeBtn")) {
-      e.target.parentElement.remove();
-    }
+  removeBtn.addEventListener("click" , (e)=>{
+    e.target.parentElement.remove();
+  });
+
+  li.addEventListener("click" , (e)=>{
+    li.classList.toggle("done")
   });
 
   inp.value=""
